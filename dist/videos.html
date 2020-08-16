@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1" />
+    <link
+      rel="shortcut icon"
+      href="src/images/icons/favicon.png"
+      type="image/png"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <title>Spytt | Creatives</title>
+    <link href="css/style.bundle.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header-videos">
+      <div class="container d-flex">
+        <img class="header-logo" src="src/images/icons/logo.png" />
+        <nav class="header-nav">
+          <a class="header-nav_item active-link" href="#">Креативы</a
+          ><a class="header-nav_item" href="#">Избранное</a
+          ><a class="header-nav_item" href="#">Приглашения</a>
+        </nav>
+        <div class="account-wrapper">
+          <div class="account-tarif">Бесплатный тариф</div>
+          <div class="account-settings">
+            <img
+              class="svg account-menu_toggle"
+              src="src/images/icons/arrow.svg"
+            /><img
+              class="svg account-icon"
+              src="src/images/icons/account-icon.svg"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main-videos">
+      <section class="main-filters_section">
+        <div class="container d-flex">
+          <div class="main-filters_downloads">
+            <a class="main-filters_download" href="#"
+              ><img
+                class="svg main-filter_download-icon"
+                src="src/images/icons/ios.svg"
+              /><span>iOS</span></a
+            ><a class="main-filters_download" href="#"
+              ><img
+                class="svg main-filter_download-icon"
+                src="src/images/icons/android.svg"
+              /><span>Android</span></a
+            >
+          </div>
+          <div class="main-filters_wrapper">
+            <div class="main-filter">
+              <div class="main-filter_title">Ключевые слова</div>
+              <div class="main-filter_select-wrap">
+                <div class="main-selected_filter">
+                  <span>Все</span
+                  ><img
+                    class="main-selected_arrow svg"
+                    src="src/images/icons/arrow.svg"
+                  />
+                </div>
+                <div class="main-filter_items">
+                  <div class="main-filter_item">Все</div>
+                  <div class="main-filter_item">школа</div>
+                  <div class="main-filter_item">приколы</div>
+                </div>
+              </div>
+            </div>
+            <div class="main-filter">
+              <div class="main-filter_title">Категории</div>
+              <div class="main-filter_select-wrap">
+                <div class="main-selected_filter">
+                  <span>Все</span
+                  ><img
+                    class="main-selected_arrow svg"
+                    src="src/images/icons/arrow.svg"
+                  />
+                </div>
+                <div class="main-filter_items">
+                  <div class="main-filter_item">Все</div>
+                  <div class="main-filter_item">sddsa</div>
+                </div>
+              </div>
+            </div>
+            <div class="main-filter">
+              <div class="main-filter_title">Страны</div>
+              <div class="main-filter_select-wrap">
+                <div class="main-selected_filter">
+                  <span>Все</span
+                  ><img
+                    class="main-selected_arrow svg"
+                    src="src/images/icons/arrow.svg"
+                  />
+                </div>
+                <div class="main-filter_items">
+                  <div class="main-filter_item">Все</div>
+                  <div class="main-filter_item">Украина</div>
+                  <div class="main-filter_item">Россия</div>
+                </div>
+              </div>
+            </div>
+            <div class="main-filter">
+              <div class="main-filter_title">Период</div>
+              <div class="main-filter_select-wrap">
+                <div class="main-selected_filter">
+                  <span>Все</span
+                  ><img
+                    class="main-selected_arrow svg"
+                    src="src/images/icons/arrow.svg"
+                  />
+                </div>
+                <div class="main-filter_items">
+                  <div class="main-filter_item">Все</div>
+                  <div class="main-filter_item">Вчера</div>
+                  <div class="main-filter_item">Сегодня</div>
+                </div>
+              </div>
+            </div>
+            <div class="main-filter main-filter2 sorting-filter">
+              <div class="main-filter_title">Сортировка</div>
+              <div class="main-filter_select-wrap">
+                <div class="main-selected_filter">
+                  <img
+                    class="main-selected_arrow svg"
+                    src="src/images/icons/arrow.svg"
+                  /><span>Просмотры</span>
+                </div>
+                <div class="main-filter_items">
+                  <div class="main-filter_item">Просмотры</div>
+                  <div class="main-filter_item">Лайки</div>
+                </div>
+              </div>
+            </div>
+            <div class="main-filter main-filter2 filter-color">
+              <div class="main-filter_title">Вид</div>
+              <div class="main-filter_select-wrap">
+                <div class="main-selected_filter">
+                  <img
+                    class="main-selected_arrow svg"
+                    src="src/images/icons/arrow.svg"
+                  />
+                </div>
+                <div class="main-filter_items">
+                  <div class="main-filter_item"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-videos_section">
+        <div class="main-videos_wrapper">
+          <div class="main-video limited">
+            <video
+              class="main-video_src"
+              src="https://v16m.tiktokcdn.com/b68df60f01afc66a64a86b974edb95a5/5f3a5c6f/video/tos/useast2a/tos-useast2a-pve-0068/821bf4ef95e44ad2868fd6989af38478/?a=1233&amp;br=5176&amp;bt=2588&amp;cr=0&amp;cs=0&amp;dr=0&amp;ds=3&amp;er=&amp;l=202008151031100101902192201A52BA25&amp;lr=tiktok_m&amp;mime_type=video_mp4&amp;qs=0&amp;rc=anlwOWhmdWs3djMzNDczM0ApOmVkOjs0aTs8Nzs1Nmk5NGc1b2FpcnBraV5fLS0tMTZzcy5eXl5hM2IzM2AwLTEyLjM6Yw%3D%3D&amp;vl=&amp;vr="
+            ></video>
+            <div class="main-video_limit">
+              <div class="main-video_limit-title">
+                Достигнут месячный лимит по креативам
+              </div>
+              <div class="main-video_limit-desc">
+                На бесплатном тарифе можно смотреть только 30 креативов каждый
+                месяц
+              </div>
+              <a class="main-video_limit-btn">Открыть за $99 / мес</a>
+            </div>
+            <div class="main-video_header">
+              <div class="main-video_locations">
+                <img class="svg" src="src/images/icons/ios.svg" /><img
+                  class="svg"
+                  src="src/images/icons/android.svg"
+                /><span>🇷🇺🇺🇦🇧🇾</span>
+              </div>
+              <div class="main-video_period">
+                <span>40 дней</span><span>12 июл - 21 авг</span>
+              </div>
+              <div class="main-video_favorite-wrap">
+                <img class="svg" src="src/images/icons/favorite.svg" />
+              </div>
+            </div>
+            <div class="main-video_content">
+              <div class="main-video_title">Uber Russia</div>
+              <div class="main-video_description">
+                До конца лента заказывай поездки в центр и обратно со скидкой до
+                30%
+              </div>
+              <div class="main-video_text-actions">
+                <div class="main-video_text-actions">Скопировать</div>
+                <div class="main-video_actions-dot"></div>
+                <div class="main-video_text-actions">Перевести</div>
+              </div>
+              <a class="main-video_button" href="#"
+                ><span>Перейти</span
+                ><img class="svg" src="src/images/icons/arrow.svg"
+              /></a>
+            </div>
+            <div class="main-video_statistic">
+              <div class="main-statistic_photo">
+                <img
+                  src="https://lh3.googleusercontent.com/qy_wZ92sFQccojEtscg52vtdAQmCIeQ4jsybMPmuML9Or7_SEOyrt0Jn0wyG-l2Fyw"
+                />
+              </div>
+              <div class="main-statistic_likes">
+                <img
+                  class="svg main-statistic_like-icon"
+                  src="src/images/icons/tt-like.svg"
+                />
+                <div class="main-statistic_like-count">999</div>
+              </div>
+              <div class="main-statistic_comments">
+                <img
+                  class="svg main-statistic_comment-icon"
+                  src="src/images/icons/tt-comment.svg"
+                />
+                <div class="main-statistic_comment-count">15</div>
+              </div>
+              <div class="main-statistic_share">
+                <img
+                  class="main-statistic_share-icon"
+                  src="src/images/icons/tt-share.svg"
+                />
+                <div class="main-statistic_share-count">99</div>
+              </div>
+              <div class="main-statictic_views">
+                <img
+                  class="main-statistic_view-icon"
+                  src="src/images/icons/tt-views.svg"
+                />
+                <div class="main-statistic_view-count">1000</div>
+              </div>
+            </div>
+          </div>
+          <div class="main-video">
+            <div class="main-video_gradient-top"></div>
+            <div class="main-video_gradient-bottom"></div>
+            <video
+              class="main-video_src"
+              src="https://v16m.tiktokcdn.com/c72c748339c88ce6ba50527f2b6226d7/5f3b8b6a/video/tos/useast2a/tos-useast2a-ve-0068c002/027c7db027ca414abf4958d14d0b97c6/?a=1233&amp;br=2264&amp;bt=1132&amp;cr=0&amp;cs=0&amp;dr=0&amp;ds=3&amp;er=&amp;l=202008160803530101890741482D143869&amp;lr=tiktok_m&amp;mime_type=video_mp4&amp;qs=0&amp;rc=Mzl5cG5ucnFkdTMzPDczM0ApNjYzZzQ4aWQ8Nzg1aGg4N2dwbW9wMi5tcXJfLS1fMTZzc15fMGNiYGAxLWFfXi81Ni86Yw%3D%3D&amp;vl=&amp;vr="
+            ></video>
+            <div class="main-video_limit">
+              <div class="main-video_limit-title">
+                Достигнут месячный лимит по креативам
+              </div>
+              <div class="main-video_limit-desc">
+                На бесплатном тарифе можно смотреть только 30 креативов каждый
+                месяц
+              </div>
+              <a class="main-video_limit-btn">Открыть за $99 / мес</a>
+            </div>
+            <div class="main-video_header">
+              <div class="main-video_locations">
+                <img class="svg" src="src/images/icons/ios.svg" /><img
+                  class="svg"
+                  src="src/images/icons/android.svg"
+                /><span>🇷🇺🇺🇦🇧🇾</span>
+              </div>
+              <div class="main-video_period">
+                <span>40 дней</span><span>12 июл - 21 авг</span>
+              </div>
+              <div class="main-video_favorite-wrap">
+                <img class="svg" src="src/images/icons/favorite.svg" />
+              </div>
+            </div>
+            <div class="main-video_content">
+              <div class="main-video_title">Uber Russia</div>
+              <div class="main-video_description">
+                До конца лента заказывай поездки в центр и обратно со скидкой до
+                30%
+              </div>
+              <div class="main-video_text-actions">
+                <div class="main-video_text-actions">Скопировать</div>
+                <div class="main-video_actions-dot"></div>
+                <div class="main-video_text-actions">Перевести</div>
+              </div>
+              <a class="main-video_button" href="#"
+                ><span>Перейти</span
+                ><img class="svg" src="src/images/icons/arrow.svg"
+              /></a>
+            </div>
+            <div class="main-video_statistic">
+              <div class="main-statistic_photo">
+                <img
+                  src="https://lh3.googleusercontent.com/qy_wZ92sFQccojEtscg52vtdAQmCIeQ4jsybMPmuML9Or7_SEOyrt0Jn0wyG-l2Fyw"
+                />
+              </div>
+              <div class="main-statistic_likes">
+                <img
+                  class="svg main-statistic_like-icon"
+                  src="src/images/icons/tt-like.svg"
+                />
+                <div class="main-statistic_like-count">999</div>
+              </div>
+              <div class="main-statistic_comments">
+                <img
+                  class="svg main-statistic_comment-icon"
+                  src="src/images/icons/tt-comment.svg"
+                />
+                <div class="main-statistic_comment-count">15</div>
+              </div>
+              <div class="main-statistic_share">
+                <img
+                  class="main-statistic_share-icon"
+                  src="src/images/icons/tt-share.svg"
+                />
+                <div class="main-statistic_share-count">99</div>
+              </div>
+              <div class="main-statictic_views">
+                <img
+                  class="main-statistic_view-icon"
+                  src="src/images/icons/tt-views.svg"
+                />
+                <div class="main-statistic_view-count">1000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"
+      integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./js/bundle.js"></script>
+  </body>
+</html>
