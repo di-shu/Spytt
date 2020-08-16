@@ -479,8 +479,9 @@
       align-items: center;
       position: relative;
 
-      svg {
+      svg,img {
         position: relative;
+        z-index: 1;
       }
 
       &:before {
@@ -563,9 +564,11 @@
         margin-right: 6px;
       }
 
-      svg {
+      svg,img {
         transform: rotate(-90deg);
         width: 10px;
+        z-index: 1;
+        position: relative;
       }
 
     }
