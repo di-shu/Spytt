@@ -1,0 +1,138 @@
+extends includes/layout
+include mixins/filters
+
+block vars
+    - const title = 'Spytt | Creatives'
+    - const filters = [{title: 'Ключевые слова',options:['Все','школа','приколы']}, {title: 'Категории', options:['Все','sddsa']}, {title: 'Страны', options:['Все','Украина','Россия']}, {title: 'Период',options: ['Все','Вчера', 'Сегодня']}]
+
+append header
+    header.header-videos
+        .container.d-flex
+            img.header-logo(src='src/images/icons/logo.png')
+            nav.header-nav
+                a.header-nav_item.active-link(href="#") Креативы
+                a.header-nav_item(href="#") Избранное
+                a.header-nav_item(href="#") Приглашения
+            .account-wrapper
+                .account-tarif Бесплатный тариф
+                .account-settings
+                    img.svg.account-menu_toggle(src="src/images/icons/arrow.svg")
+                    img.svg.account-icon(src="src/images/icons/account-icon.svg")
+
+
+
+append content
+    main#main-videos
+        section.main-filters_section
+            .container.d-flex
+                .main-filters_downloads
+                    a.main-filters_download(href='#')
+                        img.svg.main-filter_download-icon(src="src/images/icons/ios.svg")
+                        span iOS
+                    a.main-filters_download(href='#')
+                        img.svg.main-filter_download-icon(src="src/images/icons/android.svg")
+                        span Android
+                .main-filters_wrapper
+                    +filters(filters)
+                    .main-filter.main-filter2.sorting-filter
+                        .main-filter_title Сортировка
+                        .main-filter_select-wrap
+                            .main-selected_filter
+                                img.main-selected_arrow.svg(src="src/images/icons/arrow.svg")
+                                span Просмотры
+                            .main-filter_items
+                                .main-filter_item Просмотры
+                                .main-filter_item Лайки
+                    .main-filter.main-filter2.filter-color
+                        .main-filter_title Вид
+                        .main-filter_select-wrap
+                            .main-selected_filter
+                                img.main-selected_arrow.svg(src="src/images/icons/arrow.svg")
+                            .main-filter_items
+                                .main-filter_item
+        section.main-videos_section
+            .main-videos_wrapper
+                .main-video.limited
+                    video.main-video_src(src="https://v16m.tiktokcdn.com/b68df60f01afc66a64a86b974edb95a5/5f3a5c6f/video/tos/useast2a/tos-useast2a-pve-0068/821bf4ef95e44ad2868fd6989af38478/?a=1233&br=5176&bt=2588&cr=0&cs=0&dr=0&ds=3&er=&l=202008151031100101902192201A52BA25&lr=tiktok_m&mime_type=video_mp4&qs=0&rc=anlwOWhmdWs3djMzNDczM0ApOmVkOjs0aTs8Nzs1Nmk5NGc1b2FpcnBraV5fLS0tMTZzcy5eXl5hM2IzM2AwLTEyLjM6Yw%3D%3D&vl=&vr=")
+                    .main-video_limit
+                        .main-video_limit-title Достигнут месячный лимит по креативам
+                        .main-video_limit-desc На бесплатном тарифе можно смотреть только 30 креативов каждый месяц
+                        a.main-video_limit-btn Открыть за $99 / мес
+                    .main-video_header
+                        .main-video_locations
+                            img.svg(src="src/images/icons/ios.svg")
+                            img.svg(src="src/images/icons/android.svg")
+                            span 🇷🇺🇺🇦🇧🇾
+                        .main-video_period
+                            span 40 дней
+                            span 12 июл - 21 авг
+                        .main-video_favorite-wrap
+                            img.svg(src="src/images/icons/favorite.svg")
+                    .main-video_content
+                        .main-video_title Uber Russia
+                        .main-video_description До конца лента заказывай поездки в центр и обратно со скидкой до 30%
+                        .main-video_text-actions
+                            .main-video_text-actions Скопировать
+                            .main-video_actions-dot
+                            .main-video_text-actions Перевести
+                        a.main-video_button(href="#")
+                            span Перейти
+                            img.svg(src="src/images/icons/arrow.svg")
+                    .main-video_statistic
+                        .main-statistic_photo
+                            img(src="https://lh3.googleusercontent.com/qy_wZ92sFQccojEtscg52vtdAQmCIeQ4jsybMPmuML9Or7_SEOyrt0Jn0wyG-l2Fyw")
+                        .main-statistic_likes
+                            img.svg.main-statistic_like-icon(src="src/images/icons/tt-like.svg")
+                            .main-statistic_like-count 999
+                        .main-statistic_comments
+                            img.svg.main-statistic_comment-icon(src="src/images/icons/tt-comment.svg")
+                            .main-statistic_comment-count 15
+                        .main-statistic_share
+                            img.main-statistic_share-icon(src="src/images/icons/tt-share.svg")
+                            .main-statistic_share-count 99
+                        .main-statictic_views
+                            img.main-statistic_view-icon(src="src/images/icons/tt-views.svg")
+                            .main-statistic_view-count 1000
+                .main-video
+                    .main-video_gradient-top
+                    .main-video_gradient-bottom
+                    video.main-video_src(src="https://v16m.tiktokcdn.com/c72c748339c88ce6ba50527f2b6226d7/5f3b8b6a/video/tos/useast2a/tos-useast2a-ve-0068c002/027c7db027ca414abf4958d14d0b97c6/?a=1233&br=2264&bt=1132&cr=0&cs=0&dr=0&ds=3&er=&l=202008160803530101890741482D143869&lr=tiktok_m&mime_type=video_mp4&qs=0&rc=Mzl5cG5ucnFkdTMzPDczM0ApNjYzZzQ4aWQ8Nzg1aGg4N2dwbW9wMi5tcXJfLS1fMTZzc15fMGNiYGAxLWFfXi81Ni86Yw%3D%3D&vl=&vr=")
+                    .main-video_limit
+                        .main-video_limit-title Достигнут месячный лимит по креативам
+                        .main-video_limit-desc На бесплатном тарифе можно смотреть только 30 креативов каждый месяц
+                        a.main-video_limit-btn Открыть за $99 / мес
+                    .main-video_header
+                        .main-video_locations
+                            img.svg(src="src/images/icons/ios.svg")
+                            img.svg(src="src/images/icons/android.svg")
+                            span 🇷🇺🇺🇦🇧🇾
+                        .main-video_period
+                            span 40 дней
+                            span 12 июл - 21 авг
+                        .main-video_favorite-wrap
+                            img.svg(src="src/images/icons/favorite.svg")
+                    .main-video_content
+                        .main-video_title Uber Russia
+                        .main-video_description До конца лента заказывай поездки в центр и обратно со скидкой до 30%
+                        .main-video_text-actions
+                            .main-video_text-actions Скопировать
+                            .main-video_actions-dot
+                            .main-video_text-actions Перевести
+                        a.main-video_button(href="#")
+                            span Перейти
+                            img.svg(src="src/images/icons/arrow.svg")
+                    .main-video_statistic
+                        .main-statistic_photo
+                            img(src="https://lh3.googleusercontent.com/qy_wZ92sFQccojEtscg52vtdAQmCIeQ4jsybMPmuML9Or7_SEOyrt0Jn0wyG-l2Fyw")
+                        .main-statistic_likes
+                            img.svg.main-statistic_like-icon(src="src/images/icons/tt-like.svg")
+                            .main-statistic_like-count 999
+                        .main-statistic_comments
+                            img.svg.main-statistic_comment-icon(src="src/images/icons/tt-comment.svg")
+                            .main-statistic_comment-count 15
+                        .main-statistic_share
+                            img.main-statistic_share-icon(src="src/images/icons/tt-share.svg")
+                            .main-statistic_share-count 99
+                        .main-statictic_views
+                            img.main-statistic_view-icon(src="src/images/icons/tt-views.svg")
+                            .main-statistic_view-count 1000

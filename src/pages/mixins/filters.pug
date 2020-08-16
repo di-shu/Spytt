@@ -1,0 +1,11 @@
+mixin filters(filters)
+    each filter in filters
+        .main-filter
+            .main-filter_title #{filter.title}
+            .main-filter_select-wrap
+                .main-selected_filter
+                    span Все
+                    img.main-selected_arrow.svg(src="src/images/icons/arrow.svg")
+                .main-filter_items
+                    each option in filter.options
+                        .main-filter_item #{option}

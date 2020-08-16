@@ -1,0 +1,23 @@
+*{
+  box-sizing: border-box;
+  outline: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: $black;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+}
+
+body {
+  font-family: $graphikRg;
+  min-height: 100vh;
+}
