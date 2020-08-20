@@ -2,6 +2,7 @@
   box-sizing: border-box;
   outline: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
   margin: 0;
 }
 
@@ -17,7 +18,28 @@ select {
   border: none;
 }
 
+button {
+  outline: none;
+  border: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+label {
+  margin: 0;
+}
+
 body {
   font-family: $graphikRg;
   min-height: 100vh;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+

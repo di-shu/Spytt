@@ -1,0 +1,11 @@
+mixin countries(countries)
+    .filter-country_title Креативы, которые замечены в:
+    .filter-country_input-wrapper
+        img.svg(src="src/images/icons/icons8-search.svg")
+        input.filter-country_input(type="text" placeholder="Поиск")
+    ul.filter-country_list
+        each country in countries
+            li.filter-country_item
+                img.svg(src=country.img)
+                span.filter-country=country.country
+    .rect-bottom

@@ -38,6 +38,11 @@
               src="src/images/icons/account-icon.svg"
             />
           </div>
+          <div class="account-menu">
+            <span class="account-menu_name">google@gmail.com</span
+            ><span class="account-menu_settings">Настройки</span
+            ><span class="account-menu_logout">Выход</span>
+          </div>
         </div>
       </div>
     </header>
@@ -62,16 +67,199 @@
               <div class="main-filter_title">Ключевые слова</div>
               <div class="main-filter_select-wrap">
                 <div class="main-selected_filter">
-                  <span>Все</span
-                  ><img
+                  <div class="main-selected_words">
+                    <span class="selected-all">Все</span
+                    ><span class="first-selected no-active"></span
+                    ><span class="second-selected no-active"></span>
+                  </div>
+                  <img
                     class="main-selected_arrow svg"
                     src="src/images/icons/arrow.svg"
                   />
                 </div>
-                <div class="main-filter_items">
-                  <div class="main-filter_item">Все</div>
-                  <div class="main-filter_item">школа</div>
-                  <div class="main-filter_item">приколы</div>
+                <div class="main-filter_items main-keywords_filter">
+                  <div class="main-keyword_filter">
+                    <div class="main-keywords_title">
+                      Только те, где есть слова:
+                    </div>
+                    <div class="main-keywords_inputs-wrap">
+                      <div class="main-keywords_inputs">
+                        <div class="main-keywords_input">
+                          <div class="main-keyword_input-wrap">
+                            <div class="main-keyword_input">
+                              <span>описание</span
+                              ><img
+                                class="svg main-keyword_arrow"
+                                src="src/images/icons/arrow.svg"
+                              />
+                            </div>
+                            <div class="main-keyword_menu">
+                              <div class="main-keyword_menu-title">
+                                Искать слова в
+                              </div>
+                              <div
+                                class="main-keyword_menu-item keyword-active"
+                              >
+                                описание
+                              </div>
+                              <div class="main-keyword_menu-item">
+                                заголовок
+                              </div>
+                              <div class="main-keyword_menu-item">везде</div>
+                            </div>
+                          </div>
+                          <div class="main-keyword_input-word_wrap">
+                            <input
+                              class="main-keyword_input-word"
+                              type="text"
+                              placeholder="Введите"
+                            />
+                            <div class="keyword-delete_wrap">
+                              <img
+                                class="svg keyword-delete"
+                                src="src/images/icons/arrow.svg"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="main-keywords_inputs">
+                        <div class="main-keywords_input">
+                          <div class="main-keyword_input-wrap">
+                            <div class="main-keyword_input">
+                              <span>описание</span
+                              ><img
+                                class="svg main-keyword_arrow"
+                                src="src/images/icons/arrow.svg"
+                              />
+                            </div>
+                            <div class="main-keyword_menu">
+                              <div class="main-keyword_menu-title">
+                                Искать слова в
+                              </div>
+                              <div
+                                class="main-keyword_menu-item keyword-active"
+                              >
+                                описание
+                              </div>
+                              <div class="main-keyword_menu-item">
+                                заголовок
+                              </div>
+                              <div class="main-keyword_menu-item">везде</div>
+                            </div>
+                          </div>
+                          <div class="main-keyword_input-word_wrap">
+                            <input
+                              class="main-keyword_input-word"
+                              type="text"
+                              placeholder="Введите"
+                            />
+                            <div class="keyword-delete_wrap">
+                              <img
+                                class="svg keyword-delete"
+                                src="src/images/icons/arrow.svg"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="main-keyword_add">Добавить еще одно</div>
+                    </div>
+                  </div>
+                  <div class="main-keyword_filter2">
+                    <div class="main-keywords_title">
+                      Убрать те, где есть слова:
+                    </div>
+                    <div class="main-keywords_inputs-wrap">
+                      <div class="main-keywords_inputs">
+                        <div class="main-keywords_input">
+                          <div class="main-keyword_input-wrap">
+                            <div class="main-keyword_input">
+                              <span>описание</span
+                              ><img
+                                class="svg main-keyword_arrow"
+                                src="src/images/icons/arrow.svg"
+                              />
+                            </div>
+                            <div class="main-keyword_menu">
+                              <div class="main-keyword_menu-title">
+                                Искать слова в
+                              </div>
+                              <div
+                                class="main-keyword_menu-item2 keyword-active"
+                              >
+                                описание
+                              </div>
+                              <div class="main-keyword_menu-item2">
+                                заголовок
+                              </div>
+                              <div class="main-keyword_menu-item2">везде</div>
+                            </div>
+                          </div>
+                          <div class="main-keyword_input-word_wrap2">
+                            <input
+                              class="main-keyword_input-word2"
+                              type="text"
+                              placeholder="Введите"
+                            />
+                            <div class="keyword-delete_wrap2">
+                              <img
+                                class="svg keyword-delete"
+                                src="src/images/icons/arrow.svg"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="main-keywords_inputs">
+                        <div class="main-keywords_input">
+                          <div class="main-keyword_input-wrap">
+                            <div class="main-keyword_input">
+                              <span>описание</span
+                              ><img
+                                class="svg main-keyword_arrow"
+                                src="src/images/icons/arrow.svg"
+                              />
+                            </div>
+                            <div class="main-keyword_menu">
+                              <div class="main-keyword_menu-title">
+                                Искать слова в
+                              </div>
+                              <div
+                                class="main-keyword_menu-item2 keyword-active"
+                              >
+                                описание
+                              </div>
+                              <div class="main-keyword_menu-item2">
+                                заголовок
+                              </div>
+                              <div class="main-keyword_menu-item2">везде</div>
+                            </div>
+                          </div>
+                          <div class="main-keyword_input-word_wrap2">
+                            <input
+                              class="main-keyword_input-word2"
+                              type="text"
+                              placeholder="Введите"
+                            />
+                            <div class="keyword-delete_wrap2">
+                              <img
+                                class="svg keyword-delete"
+                                src="src/images/icons/arrow.svg"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="main-keyword_add">Добавить еще одно</div>
+                    </div>
+                  </div>
+                  <div class="main-keywords_actions">
+                    <div class="main-keywords_reset">Сбросить</div>
+                    <button class="main-keyword_accept" disabled>
+                      Применить
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -85,9 +273,45 @@
                     src="src/images/icons/arrow.svg"
                   />
                 </div>
-                <div class="main-filter_items">
-                  <div class="main-filter_item">Все</div>
-                  <div class="main-filter_item">sddsa</div>
+                <div class="main-filter_items main-filter_categories">
+                  <div class="filter-categories_header">
+                    <div class="filter-categories_title">
+                      Категория продукта
+                    </div>
+                    <div class="filter-categories_reset">Сбросить</div>
+                  </div>
+                  <div class="filter-categories_wrapper">
+                    <ul class="filter-categories_apps">
+                      <div class="category-title">Все приложения</div>
+                      <li class="filter-categories_app">Бизнес</li>
+                      <li class="filter-categories_app">Графика и дизайн</li>
+                      <li class="filter-categories_app">Дети</li>
+                      <li class="filter-categories_app">Еда и напитки</li>
+                      <li class="filter-categories_app">Здоровье и фитнес</li>
+                      <li class="filter-categories_app">Книги</li>
+                      <li class="filter-categories_app">Музыка</li>
+                      <li class="filter-categories_app">Социальные сети</li>
+                      <li class="filter-categories_app">Знакомства</li>
+                      <li class="filter-categories_app">Образ жизни</li>
+                      <li class="filter-categories_app">Покупка</li>
+                      <li class="filter-categories_app">Фото и видео</li>
+                    </ul>
+                    <ul class="filter-categories_games">
+                      <div class="category-title">Все игры</div>
+                      <li class="filter-categories_game">Экшен</li>
+                      <li class="filter-categories_game">Приключения</li>
+                      <li class="filter-categories_game">Аркады</li>
+                      <li class="filter-categories_game">Стратегии</li>
+                      <li class="filter-categories_game">Настольные</li>
+                      <li class="filter-categories_game">Казино</li>
+                      <li class="filter-categories_game">Казуальные</li>
+                      <li class="filter-categories_game">Обучающие</li>
+                      <li class="filter-categories_game">Музыка</li>
+                      <li class="filter-categories_game">Головоломки</li>
+                      <li class="filter-categories_game">Гонки</li>
+                      <li class="filter-categories_game">Ролевые</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -95,16 +319,80 @@
               <div class="main-filter_title">Страны</div>
               <div class="main-filter_select-wrap">
                 <div class="main-selected_filter">
+                  <div class="selected-countries"></div>
                   <span>Все</span
                   ><img
                     class="main-selected_arrow svg"
                     src="src/images/icons/arrow.svg"
                   />
                 </div>
-                <div class="main-filter_items">
-                  <div class="main-filter_item">Все</div>
-                  <div class="main-filter_item">Украина</div>
-                  <div class="main-filter_item">Россия</div>
+                <div class="main-filter_items main-filter_countries">
+                  <div class="filter-country_title">
+                    Креативы, которые замечены в:
+                  </div>
+                  <div class="filter-country_input-wrapper">
+                    <img
+                      class="svg"
+                      src="src/images/icons/icons8-search.svg"
+                    /><input
+                      class="filter-country_input"
+                      type="text"
+                      placeholder="Поиск"
+                    />
+                  </div>
+                  <ul class="filter-country_list">
+                    <li class="filter-country_item">
+                      <img class="svg" src="ukr" /><span class="filter-country"
+                        >Украина</span
+                      >
+                    </li>
+                    <li class="filter-country_item">
+                      <img class="svg" src="rus" /><span class="filter-country"
+                        >Россия</span
+                      >
+                    </li>
+                    <li class="filter-country_item">
+                      <img class="svg" src="ger" /><span class="filter-country"
+                        >Германия</span
+                      >
+                    </li>
+                    <li class="filter-country_item">
+                      <img class="svg" src="usa" /><span class="filter-country"
+                        >США</span
+                      >
+                    </li>
+                    <li class="filter-country_item">
+                      <img class="svg" src="aus" /><span class="filter-country"
+                        >Австрия</span
+                      >
+                    </li>
+                    <li class="filter-country_item">
+                      <img class="svg" src="ukr" /><span class="filter-country"
+                        >Украина</span
+                      >
+                    </li>
+                    <li class="filter-country_item">
+                      <img class="svg" src="rus" /><span class="filter-country"
+                        >Россия</span
+                      >
+                    </li>
+                    <li class="filter-country_item">
+                      <img class="svg" src="ger" /><span class="filter-country"
+                        >Германия</span
+                      >
+                    </li>
+                    <li class="filter-country_item">
+                      <img class="svg" src="usa" /><span class="filter-country"
+                        >США</span
+                      >
+                    </li>
+                    <li class="filter-country_item">
+                      <img class="svg" src="aus" /><span class="filter-country"
+                        >Австрия</span
+                      >
+                    </li>
+                  </ul>
+                  <div class="rect-bottom"></div>
                 </div>
               </div>
             </div>
@@ -118,10 +406,24 @@
                     src="src/images/icons/arrow.svg"
                   />
                 </div>
-                <div class="main-filter_items">
-                  <div class="main-filter_item">Все</div>
-                  <div class="main-filter_item">Вчера</div>
-                  <div class="main-filter_item">Сегодня</div>
+                <div class="main-filter_items main-filter_period">
+                  <div class="main-period_title">Когда замечен</div>
+                  <ul class="main-period_list">
+                    <li class="main-period_item main-period_1v period-active">
+                      7 дней
+                    </li>
+                    <li class="main-period_item main-period_1v">30 дней</li>
+                    <li class="main-period_item main-period_1v">Полгода</li>
+                  </ul>
+                  <div class="main-period_title">Сколько был/есть активен</div>
+                  <ul class="main-period_list">
+                    <li class="main-period_item main-period_2v period-active">
+                      По убыванию
+                    </li>
+                    <li class="main-period_item main-period_2v">
+                      По возрастанию
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -134,9 +436,31 @@
                     src="src/images/icons/arrow.svg"
                   /><span>Просмотры</span>
                 </div>
-                <div class="main-filter_items">
-                  <div class="main-filter_item">Просмотры</div>
-                  <div class="main-filter_item">Лайки</div>
+                <div class="main-filter_items main-filter_sorting">
+                  <div class="main-sorting_title">Сортировать по</div>
+                  <ul class="main-sorting_list">
+                    <li
+                      class="main-sorting_item main-sorting_1v sorting-active"
+                    >
+                      Просмотры
+                    </li>
+                    <li class="main-sorting_item main-sorting_1v">Период</li>
+                    <li class="main-sorting_item main-sorting_1v">
+                      Комментарии
+                    </li>
+                    <li class="main-sorting_item main-sorting_1v">Лайки</li>
+                  </ul>
+                  <div class="main-sorting_title">Как именно</div>
+                  <ul class="main-sorting_list">
+                    <li
+                      class="main-sorting_item main-sorting_2v sorting-active"
+                    >
+                      По убыванию
+                    </li>
+                    <li class="main-sorting_item main-sorting_2v">
+                      По возрастанию
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -149,8 +473,22 @@
                     src="src/images/icons/arrow.svg"
                   />
                 </div>
-                <div class="main-filter_items">
-                  <div class="main-filter_item"></div>
+                <div class="main-filter_items main-filter_view">
+                  <div class="filter-view_title">Режим просмотра</div>
+                  <ul class="filter-view_list">
+                    <li class="filter-view_item view-active" data-videos="100%">
+                      <span>На всю ширину</span
+                      ><img class="svg" src="src/images/icons/arrow.svg" />
+                    </li>
+                    <li class="filter-view_item" data-videos="1200px">
+                      <span>Почти на всю ширину</span
+                      ><img class="svg" src="src/images/icons/arrow.svg" />
+                    </li>
+                    <li class="filter-view_item" data-videos="900px">
+                      <span>По три видео</span
+                      ><img class="svg" src="src/images/icons/arrow.svg" />
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -162,7 +500,7 @@
           <div class="main-video limited">
             <video
               class="main-video_src"
-              src="https://v16m.tiktokcdn.com/b68df60f01afc66a64a86b974edb95a5/5f3a5c6f/video/tos/useast2a/tos-useast2a-pve-0068/821bf4ef95e44ad2868fd6989af38478/?a=1233&amp;br=5176&amp;bt=2588&amp;cr=0&amp;cs=0&amp;dr=0&amp;ds=3&amp;er=&amp;l=202008151031100101902192201A52BA25&amp;lr=tiktok_m&amp;mime_type=video_mp4&amp;qs=0&amp;rc=anlwOWhmdWs3djMzNDczM0ApOmVkOjs0aTs8Nzs1Nmk5NGc1b2FpcnBraV5fLS0tMTZzcy5eXl5hM2IzM2AwLTEyLjM6Yw%3D%3D&amp;vl=&amp;vr="
+              src='https://v16m.tiktokcdn.com/fd5efcf023de654e83c7a913175faeb0/5f3ec29d/video/tos/useast2a/tos-useast2a-ve-0068c002/a89c2382844a41af956e31921540f53d/?a=1233&amp;br=1660&amp;bt=830&amp;cr=0&amp;cs=0&amp;dr=0&amp;ds=3&amp;er=&amp;l=2020081818361301018907313246390307&amp;lr=tiktok_m&amp;mime_type=video_mp4&amp;qs=0&amp;rc=M2wzeW9uZWdkdTMzZjczM0ApZjM1ODtmNDw7NzgzNDxoOGdjanBzLy1wY25fLS0tMTZzczQtY2AyLmM1YjUyYC1hYWI6Yw%3D%3D&amp;vl=&amp;vr="'
             ></video>
             <div class="main-video_limit">
               <div class="main-video_limit-title">
@@ -195,9 +533,9 @@
                 30%
               </div>
               <div class="main-video_text-actions">
-                <div class="main-video_text-actions">Скопировать</div>
+                <div class="main-video_text-action">Скопировать</div>
                 <div class="main-video_actions-dot"></div>
-                <div class="main-video_text-actions">Перевести</div>
+                <div class="main-video_text-action">Перевести</div>
               </div>
               <a class="main-video_button" href="#"
                 ><span>Перейти</span
@@ -231,7 +569,7 @@
                 />
                 <div class="main-statistic_share-count">99</div>
               </div>
-              <div class="main-statictic_views">
+              <div class="main-statistic_views">
                 <img
                   class="main-statistic_view-icon"
                   src="src/images/icons/tt-views.svg"
@@ -245,7 +583,7 @@
             <div class="main-video_gradient-bottom"></div>
             <video
               class="main-video_src"
-              src="https://v16m.tiktokcdn.com/c72c748339c88ce6ba50527f2b6226d7/5f3b8b6a/video/tos/useast2a/tos-useast2a-ve-0068c002/027c7db027ca414abf4958d14d0b97c6/?a=1233&amp;br=2264&amp;bt=1132&amp;cr=0&amp;cs=0&amp;dr=0&amp;ds=3&amp;er=&amp;l=202008160803530101890741482D143869&amp;lr=tiktok_m&amp;mime_type=video_mp4&amp;qs=0&amp;rc=Mzl5cG5ucnFkdTMzPDczM0ApNjYzZzQ4aWQ8Nzg1aGg4N2dwbW9wMi5tcXJfLS1fMTZzc15fMGNiYGAxLWFfXi81Ni86Yw%3D%3D&amp;vl=&amp;vr="
+              src='https://v16m.tiktokcdn.com/fd5efcf023de654e83c7a913175faeb0/5f3ec29d/video/tos/useast2a/tos-useast2a-ve-0068c002/a89c2382844a41af956e31921540f53d/?a=1233&amp;br=1660&amp;bt=830&amp;cr=0&amp;cs=0&amp;dr=0&amp;ds=3&amp;er=&amp;l=2020081818361301018907313246390307&amp;lr=tiktok_m&amp;mime_type=video_mp4&amp;qs=0&amp;rc=M2wzeW9uZWdkdTMzZjczM0ApZjM1ODtmNDw7NzgzNDxoOGdjanBzLy1wY25fLS0tMTZzczQtY2AyLmM1YjUyYC1hYWI6Yw%3D%3D&amp;vl=&amp;vr="'
             ></video>
             <div class="main-video_limit">
               <div class="main-video_limit-title">
@@ -278,9 +616,9 @@
                 30%
               </div>
               <div class="main-video_text-actions">
-                <div class="main-video_text-actions">Скопировать</div>
+                <div class="main-video_text-action">Скопировать</div>
                 <div class="main-video_actions-dot"></div>
-                <div class="main-video_text-actions">Перевести</div>
+                <div class="main-video_text-action">Перевести</div>
               </div>
               <a class="main-video_button" href="#"
                 ><span>Перейти</span
@@ -314,7 +652,339 @@
                 />
                 <div class="main-statistic_share-count">99</div>
               </div>
-              <div class="main-statictic_views">
+              <div class="main-statistic_views">
+                <img
+                  class="main-statistic_view-icon"
+                  src="src/images/icons/tt-views.svg"
+                />
+                <div class="main-statistic_view-count">1000</div>
+              </div>
+            </div>
+          </div>
+          <div class="main-video">
+            <div class="main-video_gradient-top"></div>
+            <div class="main-video_gradient-bottom"></div>
+            <video
+              class="main-video_src"
+              src='https://v16m.tiktokcdn.com/fd5efcf023de654e83c7a913175faeb0/5f3ec29d/video/tos/useast2a/tos-useast2a-ve-0068c002/a89c2382844a41af956e31921540f53d/?a=1233&amp;br=1660&amp;bt=830&amp;cr=0&amp;cs=0&amp;dr=0&amp;ds=3&amp;er=&amp;l=2020081818361301018907313246390307&amp;lr=tiktok_m&amp;mime_type=video_mp4&amp;qs=0&amp;rc=M2wzeW9uZWdkdTMzZjczM0ApZjM1ODtmNDw7NzgzNDxoOGdjanBzLy1wY25fLS0tMTZzczQtY2AyLmM1YjUyYC1hYWI6Yw%3D%3D&amp;vl=&amp;vr="'
+            ></video>
+            <div class="main-video_limit">
+              <div class="main-video_limit-title">
+                Достигнут месячный лимит по креативам
+              </div>
+              <div class="main-video_limit-desc">
+                На бесплатном тарифе можно смотреть только 30 креативов каждый
+                месяц
+              </div>
+              <a class="main-video_limit-btn">Открыть за $99 / мес</a>
+            </div>
+            <div class="main-video_header">
+              <div class="main-video_locations">
+                <img class="svg" src="src/images/icons/ios.svg" /><img
+                  class="svg"
+                  src="src/images/icons/android.svg"
+                /><span>🇷🇺🇺🇦🇧🇾</span>
+              </div>
+              <div class="main-video_period">
+                <span>40 дней</span><span>12 июл - 21 авг</span>
+              </div>
+              <div class="main-video_favorite-wrap">
+                <img class="svg" src="src/images/icons/favorite.svg" />
+              </div>
+            </div>
+            <div class="main-video_content">
+              <div class="main-video_title">Uber Russia</div>
+              <div class="main-video_description">
+                До конца лента заказывай поездки в центр и обратно со скидкой до
+                30%
+              </div>
+              <div class="main-video_text-actions">
+                <div class="main-video_text-action">Скопировать</div>
+                <div class="main-video_actions-dot"></div>
+                <div class="main-video_text-action">Перевести</div>
+              </div>
+              <a class="main-video_button" href="#"
+                ><span>Перейти</span
+                ><img class="svg" src="src/images/icons/arrow.svg"
+              /></a>
+            </div>
+            <div class="main-video_statistic">
+              <div class="main-statistic_photo">
+                <img
+                  src="https://lh3.googleusercontent.com/qy_wZ92sFQccojEtscg52vtdAQmCIeQ4jsybMPmuML9Or7_SEOyrt0Jn0wyG-l2Fyw"
+                />
+              </div>
+              <div class="main-statistic_likes">
+                <img
+                  class="svg main-statistic_like-icon"
+                  src="src/images/icons/tt-like.svg"
+                />
+                <div class="main-statistic_like-count">999</div>
+              </div>
+              <div class="main-statistic_comments">
+                <img
+                  class="svg main-statistic_comment-icon"
+                  src="src/images/icons/tt-comment.svg"
+                />
+                <div class="main-statistic_comment-count">15</div>
+              </div>
+              <div class="main-statistic_share">
+                <img
+                  class="main-statistic_share-icon"
+                  src="src/images/icons/tt-share.svg"
+                />
+                <div class="main-statistic_share-count">99</div>
+              </div>
+              <div class="main-statistic_views">
+                <img
+                  class="main-statistic_view-icon"
+                  src="src/images/icons/tt-views.svg"
+                />
+                <div class="main-statistic_view-count">1000</div>
+              </div>
+            </div>
+          </div>
+          <div class="main-video">
+            <div class="main-video_gradient-top"></div>
+            <div class="main-video_gradient-bottom"></div>
+            <video
+              class="main-video_src"
+              src='https://v16m.tiktokcdn.com/fd5efcf023de654e83c7a913175faeb0/5f3ec29d/video/tos/useast2a/tos-useast2a-ve-0068c002/a89c2382844a41af956e31921540f53d/?a=1233&amp;br=1660&amp;bt=830&amp;cr=0&amp;cs=0&amp;dr=0&amp;ds=3&amp;er=&amp;l=2020081818361301018907313246390307&amp;lr=tiktok_m&amp;mime_type=video_mp4&amp;qs=0&amp;rc=M2wzeW9uZWdkdTMzZjczM0ApZjM1ODtmNDw7NzgzNDxoOGdjanBzLy1wY25fLS0tMTZzczQtY2AyLmM1YjUyYC1hYWI6Yw%3D%3D&amp;vl=&amp;vr="'
+            ></video>
+            <div class="main-video_limit">
+              <div class="main-video_limit-title">
+                Достигнут месячный лимит по креативам
+              </div>
+              <div class="main-video_limit-desc">
+                На бесплатном тарифе можно смотреть только 30 креативов каждый
+                месяц
+              </div>
+              <a class="main-video_limit-btn">Открыть за $99 / мес</a>
+            </div>
+            <div class="main-video_header">
+              <div class="main-video_locations">
+                <img class="svg" src="src/images/icons/ios.svg" /><img
+                  class="svg"
+                  src="src/images/icons/android.svg"
+                /><span>🇷🇺🇺🇦🇧🇾</span>
+              </div>
+              <div class="main-video_period">
+                <span>40 дней</span><span>12 июл - 21 авг</span>
+              </div>
+              <div class="main-video_favorite-wrap">
+                <img class="svg" src="src/images/icons/favorite.svg" />
+              </div>
+            </div>
+            <div class="main-video_content">
+              <div class="main-video_title">Uber Russia</div>
+              <div class="main-video_description">
+                До конца лента заказывай поездки в центр и обратно со скидкой до
+                30%
+              </div>
+              <div class="main-video_text-actions">
+                <div class="main-video_text-action">Скопировать</div>
+                <div class="main-video_actions-dot"></div>
+                <div class="main-video_text-action">Перевести</div>
+              </div>
+              <a class="main-video_button" href="#"
+                ><span>Перейти</span
+                ><img class="svg" src="src/images/icons/arrow.svg"
+              /></a>
+            </div>
+            <div class="main-video_statistic">
+              <div class="main-statistic_photo">
+                <img
+                  src="https://lh3.googleusercontent.com/qy_wZ92sFQccojEtscg52vtdAQmCIeQ4jsybMPmuML9Or7_SEOyrt0Jn0wyG-l2Fyw"
+                />
+              </div>
+              <div class="main-statistic_likes">
+                <img
+                  class="svg main-statistic_like-icon"
+                  src="src/images/icons/tt-like.svg"
+                />
+                <div class="main-statistic_like-count">999</div>
+              </div>
+              <div class="main-statistic_comments">
+                <img
+                  class="svg main-statistic_comment-icon"
+                  src="src/images/icons/tt-comment.svg"
+                />
+                <div class="main-statistic_comment-count">15</div>
+              </div>
+              <div class="main-statistic_share">
+                <img
+                  class="main-statistic_share-icon"
+                  src="src/images/icons/tt-share.svg"
+                />
+                <div class="main-statistic_share-count">99</div>
+              </div>
+              <div class="main-statistic_views">
+                <img
+                  class="main-statistic_view-icon"
+                  src="src/images/icons/tt-views.svg"
+                />
+                <div class="main-statistic_view-count">1000</div>
+              </div>
+            </div>
+          </div>
+          <div class="main-video">
+            <div class="main-video_gradient-top"></div>
+            <div class="main-video_gradient-bottom"></div>
+            <video
+              class="main-video_src"
+              src='https://v16m.tiktokcdn.com/fd5efcf023de654e83c7a913175faeb0/5f3ec29d/video/tos/useast2a/tos-useast2a-ve-0068c002/a89c2382844a41af956e31921540f53d/?a=1233&amp;br=1660&amp;bt=830&amp;cr=0&amp;cs=0&amp;dr=0&amp;ds=3&amp;er=&amp;l=2020081818361301018907313246390307&amp;lr=tiktok_m&amp;mime_type=video_mp4&amp;qs=0&amp;rc=M2wzeW9uZWdkdTMzZjczM0ApZjM1ODtmNDw7NzgzNDxoOGdjanBzLy1wY25fLS0tMTZzczQtY2AyLmM1YjUyYC1hYWI6Yw%3D%3D&amp;vl=&amp;vr="'
+            ></video>
+            <div class="main-video_limit">
+              <div class="main-video_limit-title">
+                Достигнут месячный лимит по креативам
+              </div>
+              <div class="main-video_limit-desc">
+                На бесплатном тарифе можно смотреть только 30 креативов каждый
+                месяц
+              </div>
+              <a class="main-video_limit-btn">Открыть за $99 / мес</a>
+            </div>
+            <div class="main-video_header">
+              <div class="main-video_locations">
+                <img class="svg" src="src/images/icons/ios.svg" /><img
+                  class="svg"
+                  src="src/images/icons/android.svg"
+                /><span>🇷🇺🇺🇦🇧🇾</span>
+              </div>
+              <div class="main-video_period">
+                <span>40 дней</span><span>12 июл - 21 авг</span>
+              </div>
+              <div class="main-video_favorite-wrap">
+                <img class="svg" src="src/images/icons/favorite.svg" />
+              </div>
+            </div>
+            <div class="main-video_content">
+              <div class="main-video_title">Uber Russia</div>
+              <div class="main-video_description">
+                До конца лента заказывай поездки в центр и обратно со скидкой до
+                30%
+              </div>
+              <div class="main-video_text-actions">
+                <div class="main-video_text-action">Скопировать</div>
+                <div class="main-video_actions-dot"></div>
+                <div class="main-video_text-action">Перевести</div>
+              </div>
+              <a class="main-video_button" href="#"
+                ><span>Перейти</span
+                ><img class="svg" src="src/images/icons/arrow.svg"
+              /></a>
+            </div>
+            <div class="main-video_statistic">
+              <div class="main-statistic_photo">
+                <img
+                  src="https://lh3.googleusercontent.com/qy_wZ92sFQccojEtscg52vtdAQmCIeQ4jsybMPmuML9Or7_SEOyrt0Jn0wyG-l2Fyw"
+                />
+              </div>
+              <div class="main-statistic_likes">
+                <img
+                  class="svg main-statistic_like-icon"
+                  src="src/images/icons/tt-like.svg"
+                />
+                <div class="main-statistic_like-count">999</div>
+              </div>
+              <div class="main-statistic_comments">
+                <img
+                  class="svg main-statistic_comment-icon"
+                  src="src/images/icons/tt-comment.svg"
+                />
+                <div class="main-statistic_comment-count">15</div>
+              </div>
+              <div class="main-statistic_share">
+                <img
+                  class="main-statistic_share-icon"
+                  src="src/images/icons/tt-share.svg"
+                />
+                <div class="main-statistic_share-count">99</div>
+              </div>
+              <div class="main-statistic_views">
+                <img
+                  class="main-statistic_view-icon"
+                  src="src/images/icons/tt-views.svg"
+                />
+                <div class="main-statistic_view-count">1000</div>
+              </div>
+            </div>
+          </div>
+          <div class="main-video">
+            <div class="main-video_gradient-top"></div>
+            <div class="main-video_gradient-bottom"></div>
+            <video
+              class="main-video_src"
+              src='https://v16m.tiktokcdn.com/fd5efcf023de654e83c7a913175faeb0/5f3ec29d/video/tos/useast2a/tos-useast2a-ve-0068c002/a89c2382844a41af956e31921540f53d/?a=1233&amp;br=1660&amp;bt=830&amp;cr=0&amp;cs=0&amp;dr=0&amp;ds=3&amp;er=&amp;l=2020081818361301018907313246390307&amp;lr=tiktok_m&amp;mime_type=video_mp4&amp;qs=0&amp;rc=M2wzeW9uZWdkdTMzZjczM0ApZjM1ODtmNDw7NzgzNDxoOGdjanBzLy1wY25fLS0tMTZzczQtY2AyLmM1YjUyYC1hYWI6Yw%3D%3D&amp;vl=&amp;vr="'
+            ></video>
+            <div class="main-video_limit">
+              <div class="main-video_limit-title">
+                Достигнут месячный лимит по креативам
+              </div>
+              <div class="main-video_limit-desc">
+                На бесплатном тарифе можно смотреть только 30 креативов каждый
+                месяц
+              </div>
+              <a class="main-video_limit-btn">Открыть за $99 / мес</a>
+            </div>
+            <div class="main-video_header">
+              <div class="main-video_locations">
+                <img class="svg" src="src/images/icons/ios.svg" /><img
+                  class="svg"
+                  src="src/images/icons/android.svg"
+                /><span>🇷🇺🇺🇦🇧🇾</span>
+              </div>
+              <div class="main-video_period">
+                <span>40 дней</span><span>12 июл - 21 авг</span>
+              </div>
+              <div class="main-video_favorite-wrap">
+                <img class="svg" src="src/images/icons/favorite.svg" />
+              </div>
+            </div>
+            <div class="main-video_content">
+              <div class="main-video_title">Uber Russia</div>
+              <div class="main-video_description">
+                До конца лента заказывай поездки в центр и обратно со скидкой до
+                30%
+              </div>
+              <div class="main-video_text-actions">
+                <div class="main-video_text-action">Скопировать</div>
+                <div class="main-video_actions-dot"></div>
+                <div class="main-video_text-action">Перевести</div>
+              </div>
+              <a class="main-video_button" href="#"
+                ><span>Перейти</span
+                ><img class="svg" src="src/images/icons/arrow.svg"
+              /></a>
+            </div>
+            <div class="main-video_statistic">
+              <div class="main-statistic_photo">
+                <img
+                  src="https://lh3.googleusercontent.com/qy_wZ92sFQccojEtscg52vtdAQmCIeQ4jsybMPmuML9Or7_SEOyrt0Jn0wyG-l2Fyw"
+                />
+              </div>
+              <div class="main-statistic_likes">
+                <img
+                  class="svg main-statistic_like-icon"
+                  src="src/images/icons/tt-like.svg"
+                />
+                <div class="main-statistic_like-count">999</div>
+              </div>
+              <div class="main-statistic_comments">
+                <img
+                  class="svg main-statistic_comment-icon"
+                  src="src/images/icons/tt-comment.svg"
+                />
+                <div class="main-statistic_comment-count">15</div>
+              </div>
+              <div class="main-statistic_share">
+                <img
+                  class="main-statistic_share-icon"
+                  src="src/images/icons/tt-share.svg"
+                />
+                <div class="main-statistic_share-count">99</div>
+              </div>
+              <div class="main-statistic_views">
                 <img
                   class="main-statistic_view-icon"
                   src="src/images/icons/tt-views.svg"
@@ -325,6 +995,25 @@
           </div>
         </div>
       </section>
+      <div class="videos-loader">
+        <svg
+          class="spinner"
+          width="65px"
+          height="65px"
+          viewbox="0 0 66 66"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            class="circle"
+            fill="none"
+            stroke-width="6"
+            stroke-linecap="round"
+            cx="33"
+            cy="33"
+            r="30"
+          ></circle>
+        </svg>
+      </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script

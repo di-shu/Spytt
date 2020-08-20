@@ -1,10 +1,10 @@
 extends includes/layout
-include mixins/filters
-
+include mixins/countries
+include mixins/categories
 block vars
     - const title = 'Spytt | Creatives'
-    - const filters = [{title: 'Ключевые слова',options:['Все','школа','приколы']}, {title: 'Категории', options:['Все','sddsa']}, {title: 'Страны', options:['Все','Украина','Россия']}, {title: 'Период',options: ['Все','Вчера', 'Сегодня']}]
-
+    - const countries = [{img: 'ukr', country: 'Украина'}, {img: 'rus', country: 'Россия'}, {img: 'ger', country: 'Германия'},{img: 'usa', country: 'США'}, {img: 'aus', country: 'Австрия'}, {img: 'ukr', country: 'Украина'}, {img: 'rus', country: 'Россия'}, {img: 'ger', country: 'Германия'},{img: 'usa', country: 'США'}, {img: 'aus', country: 'Австрия'}]
+    - const categories = {apps: ['Бизнес', 'Графика и дизайн', 'Дети', 'Еда и напитки', 'Здоровье и фитнес', 'Книги', 'Музыка', 'Социальные сети', 'Знакомства', 'Образ жизни', 'Покупка', 'Фото и видео'], games: ['Экшен', 'Приключения', 'Аркады', 'Стратегии', 'Настольные', 'Казино', 'Казуальные', 'Обучающие', 'Музыка', 'Головоломки', 'Гонки', 'Ролевые']}
 append header
     header.header-videos
         .container.d-flex
@@ -18,6 +18,10 @@ append header
                 .account-settings
                     img.svg.account-menu_toggle(src="src/images/icons/arrow.svg")
                     img.svg.account-icon(src="src/images/icons/account-icon.svg")
+                .account-menu
+                    span.account-menu_name google@gmail.com
+                    span.account-menu_settings Настройки
+                    span.account-menu_logout Выход
 
 
 
@@ -33,27 +37,160 @@ append content
                         img.svg.main-filter_download-icon(src="src/images/icons/android.svg")
                         span Android
                 .main-filters_wrapper
-                    +filters(filters)
+                    .main-filter
+                        .main-filter_title Ключевые слова
+                        .main-filter_select-wrap
+                            .main-selected_filter
+                                .main-selected_words
+                                    span.selected-all Все
+                                    span.first-selected.no-active
+                                    span.second-selected.no-active
+                                img.main-selected_arrow.svg(src="src/images/icons/arrow.svg")
+                            .main-filter_items.main-keywords_filter
+                                .main-keyword_filter
+                                    .main-keywords_title Только те, где есть слова:
+                                    .main-keywords_inputs-wrap
+                                        .main-keywords_inputs
+                                            .main-keywords_input
+                                                .main-keyword_input-wrap
+                                                    .main-keyword_input
+                                                        span описание
+                                                        img.svg.main-keyword_arrow(src="src/images/icons/arrow.svg")
+                                                    .main-keyword_menu
+                                                        .main-keyword_menu-title Искать слова в
+                                                        .main-keyword_menu-item.keyword-active описание
+                                                        .main-keyword_menu-item заголовок
+                                                        .main-keyword_menu-item везде
+                                                .main-keyword_input-word_wrap
+                                                    input.main-keyword_input-word(type="text" placeholder="Введите")
+                                                    .keyword-delete_wrap
+                                                        img.svg.keyword-delete(src="src/images/icons/arrow.svg")
+                                        .main-keywords_inputs
+                                            .main-keywords_input
+                                                .main-keyword_input-wrap
+                                                    .main-keyword_input
+                                                        span описание
+                                                        img.svg.main-keyword_arrow(src="src/images/icons/arrow.svg")
+                                                    .main-keyword_menu
+                                                        .main-keyword_menu-title Искать слова в
+                                                        .main-keyword_menu-item.keyword-active описание
+                                                        .main-keyword_menu-item заголовок
+                                                        .main-keyword_menu-item везде
+                                                .main-keyword_input-word_wrap
+                                                    input.main-keyword_input-word(type="text" placeholder="Введите")
+                                                    .keyword-delete_wrap
+                                                        img.svg.keyword-delete(src="src/images/icons/arrow.svg")
+                                        .main-keyword_add Добавить еще одно
+                                .main-keyword_filter2
+                                    .main-keywords_title Убрать те, где есть слова:
+                                    .main-keywords_inputs-wrap
+                                        .main-keywords_inputs
+                                            .main-keywords_input
+                                                .main-keyword_input-wrap
+                                                    .main-keyword_input
+                                                        span описание
+                                                        img.svg.main-keyword_arrow(src="src/images/icons/arrow.svg")
+                                                    .main-keyword_menu
+                                                        .main-keyword_menu-title Искать слова в
+                                                        .main-keyword_menu-item2.keyword-active описание
+                                                        .main-keyword_menu-item2 заголовок
+                                                        .main-keyword_menu-item2 везде
+                                                .main-keyword_input-word_wrap2
+                                                    input.main-keyword_input-word2(type="text" placeholder="Введите")
+                                                    .keyword-delete_wrap2
+                                                        img.svg.keyword-delete(src="src/images/icons/arrow.svg")
+                                        .main-keywords_inputs
+                                            .main-keywords_input
+                                                .main-keyword_input-wrap
+                                                    .main-keyword_input
+                                                        span описание
+                                                        img.svg.main-keyword_arrow(src="src/images/icons/arrow.svg")
+                                                    .main-keyword_menu
+                                                        .main-keyword_menu-title Искать слова в
+                                                        .main-keyword_menu-item2.keyword-active описание
+                                                        .main-keyword_menu-item2 заголовок
+                                                        .main-keyword_menu-item2 везде
+                                                .main-keyword_input-word_wrap2
+                                                    input.main-keyword_input-word2(type="text" placeholder="Введите")
+                                                    .keyword-delete_wrap2
+                                                        img.svg.keyword-delete(src="src/images/icons/arrow.svg")
+                                        .main-keyword_add Добавить еще одно
+                                .main-keywords_actions
+                                    .main-keywords_reset Сбросить
+                                    button.main-keyword_accept(disabled) Применить
+                    .main-filter
+                        .main-filter_title Категории
+                        .main-filter_select-wrap
+                            .main-selected_filter
+                                span Все
+                                img.main-selected_arrow.svg(src="src/images/icons/arrow.svg")
+                            .main-filter_items.main-filter_categories
+                                +categories(categories)
+                    .main-filter
+                        .main-filter_title Страны
+                        .main-filter_select-wrap
+                            .main-selected_filter
+                                .selected-countries
+                                span Все
+                                img.main-selected_arrow.svg(src="src/images/icons/arrow.svg")
+                            .main-filter_items.main-filter_countries
+                                +countries(countries)
+                    .main-filter
+                        .main-filter_title Период
+                        .main-filter_select-wrap
+                            .main-selected_filter
+                                span Все
+                                img.main-selected_arrow.svg(src="src/images/icons/arrow.svg")
+                            .main-filter_items.main-filter_period
+                                .main-period_title Когда замечен
+                                ul.main-period_list
+                                    li.main-period_item.main-period_1v.period-active 7 дней
+                                    li.main-period_item.main-period_1v 30 дней
+                                    li.main-period_item.main-period_1v Полгода
+                                .main-period_title Сколько был/есть активен
+                                ul.main-period_list
+                                    li.main-period_item.main-period_2v.period-active По убыванию
+                                    li.main-period_item.main-period_2v По возрастанию
                     .main-filter.main-filter2.sorting-filter
                         .main-filter_title Сортировка
                         .main-filter_select-wrap
                             .main-selected_filter
                                 img.main-selected_arrow.svg(src="src/images/icons/arrow.svg")
                                 span Просмотры
-                            .main-filter_items
-                                .main-filter_item Просмотры
-                                .main-filter_item Лайки
+                            .main-filter_items.main-filter_sorting
+                                .main-sorting_title Сортировать по
+                                ul.main-sorting_list
+                                    li.main-sorting_item.main-sorting_1v.sorting-active Просмотры
+                                    li.main-sorting_item.main-sorting_1v Период
+                                    li.main-sorting_item.main-sorting_1v Комментарии
+                                    li.main-sorting_item.main-sorting_1v Лайки
+                                .main-sorting_title Как именно
+                                ul.main-sorting_list
+                                    li.main-sorting_item.main-sorting_2v.sorting-active По убыванию
+                                    li.main-sorting_item.main-sorting_2v По возрастанию
+
                     .main-filter.main-filter2.filter-color
                         .main-filter_title Вид
                         .main-filter_select-wrap
                             .main-selected_filter
                                 img.main-selected_arrow.svg(src="src/images/icons/arrow.svg")
-                            .main-filter_items
-                                .main-filter_item
+                            .main-filter_items.main-filter_view
+                                .filter-view_title Режим просмотра
+                                ul.filter-view_list
+                                    li.filter-view_item.view-active(data-videos="100%")
+                                        span На всю ширину
+                                        img.svg(src='src/images/icons/arrow.svg')
+                                    li.filter-view_item(data-videos="1200px")
+                                        span Почти на всю ширину
+                                        img.svg(src='src/images/icons/arrow.svg')
+                                    li.filter-view_item(data-videos="900px")
+                                        span По три видео
+                                        img.svg(src='src/images/icons/arrow.svg')
+
         section.main-videos_section
             .main-videos_wrapper
                 .main-video.limited
-                    video.main-video_src(src="https://v16m.tiktokcdn.com/b68df60f01afc66a64a86b974edb95a5/5f3a5c6f/video/tos/useast2a/tos-useast2a-pve-0068/821bf4ef95e44ad2868fd6989af38478/?a=1233&br=5176&bt=2588&cr=0&cs=0&dr=0&ds=3&er=&l=202008151031100101902192201A52BA25&lr=tiktok_m&mime_type=video_mp4&qs=0&rc=anlwOWhmdWs3djMzNDczM0ApOmVkOjs0aTs8Nzs1Nmk5NGc1b2FpcnBraV5fLS0tMTZzcy5eXl5hM2IzM2AwLTEyLjM6Yw%3D%3D&vl=&vr=")
+                    video.main-video_src(src="https://v16m.tiktokcdn.com/fd5efcf023de654e83c7a913175faeb0/5f3ec29d/video/tos/useast2a/tos-useast2a-ve-0068c002/a89c2382844a41af956e31921540f53d/?a=1233&br=1660&bt=830&cr=0&cs=0&dr=0&ds=3&er=&l=2020081818361301018907313246390307&lr=tiktok_m&mime_type=video_mp4&qs=0&rc=M2wzeW9uZWdkdTMzZjczM0ApZjM1ODtmNDw7NzgzNDxoOGdjanBzLy1wY25fLS0tMTZzczQtY2AyLmM1YjUyYC1hYWI6Yw%3D%3D&vl=&vr=\"")
                     .main-video_limit
                         .main-video_limit-title Достигнут месячный лимит по креативам
                         .main-video_limit-desc На бесплатном тарифе можно смотреть только 30 креативов каждый месяц
@@ -72,9 +209,9 @@ append content
                         .main-video_title Uber Russia
                         .main-video_description До конца лента заказывай поездки в центр и обратно со скидкой до 30%
                         .main-video_text-actions
-                            .main-video_text-actions Скопировать
+                            .main-video_text-action Скопировать
                             .main-video_actions-dot
-                            .main-video_text-actions Перевести
+                            .main-video_text-action Перевести
                         a.main-video_button(href="#")
                             span Перейти
                             img.svg(src="src/images/icons/arrow.svg")
@@ -90,13 +227,13 @@ append content
                         .main-statistic_share
                             img.main-statistic_share-icon(src="src/images/icons/tt-share.svg")
                             .main-statistic_share-count 99
-                        .main-statictic_views
+                        .main-statistic_views
                             img.main-statistic_view-icon(src="src/images/icons/tt-views.svg")
                             .main-statistic_view-count 1000
                 .main-video
                     .main-video_gradient-top
                     .main-video_gradient-bottom
-                    video.main-video_src(src="https://v16m.tiktokcdn.com/c72c748339c88ce6ba50527f2b6226d7/5f3b8b6a/video/tos/useast2a/tos-useast2a-ve-0068c002/027c7db027ca414abf4958d14d0b97c6/?a=1233&br=2264&bt=1132&cr=0&cs=0&dr=0&ds=3&er=&l=202008160803530101890741482D143869&lr=tiktok_m&mime_type=video_mp4&qs=0&rc=Mzl5cG5ucnFkdTMzPDczM0ApNjYzZzQ4aWQ8Nzg1aGg4N2dwbW9wMi5tcXJfLS1fMTZzc15fMGNiYGAxLWFfXi81Ni86Yw%3D%3D&vl=&vr=")
+                    video.main-video_src(src="https://v16m.tiktokcdn.com/fd5efcf023de654e83c7a913175faeb0/5f3ec29d/video/tos/useast2a/tos-useast2a-ve-0068c002/a89c2382844a41af956e31921540f53d/?a=1233&br=1660&bt=830&cr=0&cs=0&dr=0&ds=3&er=&l=2020081818361301018907313246390307&lr=tiktok_m&mime_type=video_mp4&qs=0&rc=M2wzeW9uZWdkdTMzZjczM0ApZjM1ODtmNDw7NzgzNDxoOGdjanBzLy1wY25fLS0tMTZzczQtY2AyLmM1YjUyYC1hYWI6Yw%3D%3D&vl=&vr=\"")
                     .main-video_limit
                         .main-video_limit-title Достигнут месячный лимит по креативам
                         .main-video_limit-desc На бесплатном тарифе можно смотреть только 30 креативов каждый месяц
@@ -115,9 +252,9 @@ append content
                         .main-video_title Uber Russia
                         .main-video_description До конца лента заказывай поездки в центр и обратно со скидкой до 30%
                         .main-video_text-actions
-                            .main-video_text-actions Скопировать
+                            .main-video_text-action Скопировать
                             .main-video_actions-dot
-                            .main-video_text-actions Перевести
+                            .main-video_text-action Перевести
                         a.main-video_button(href="#")
                             span Перейти
                             img.svg(src="src/images/icons/arrow.svg")
@@ -133,6 +270,183 @@ append content
                         .main-statistic_share
                             img.main-statistic_share-icon(src="src/images/icons/tt-share.svg")
                             .main-statistic_share-count 99
-                        .main-statictic_views
+                        .main-statistic_views
                             img.main-statistic_view-icon(src="src/images/icons/tt-views.svg")
                             .main-statistic_view-count 1000
+                .main-video
+                    .main-video_gradient-top
+                    .main-video_gradient-bottom
+                    video.main-video_src(src="https://v16m.tiktokcdn.com/fd5efcf023de654e83c7a913175faeb0/5f3ec29d/video/tos/useast2a/tos-useast2a-ve-0068c002/a89c2382844a41af956e31921540f53d/?a=1233&br=1660&bt=830&cr=0&cs=0&dr=0&ds=3&er=&l=2020081818361301018907313246390307&lr=tiktok_m&mime_type=video_mp4&qs=0&rc=M2wzeW9uZWdkdTMzZjczM0ApZjM1ODtmNDw7NzgzNDxoOGdjanBzLy1wY25fLS0tMTZzczQtY2AyLmM1YjUyYC1hYWI6Yw%3D%3D&vl=&vr=\"")
+                    .main-video_limit
+                        .main-video_limit-title Достигнут месячный лимит по креативам
+                        .main-video_limit-desc На бесплатном тарифе можно смотреть только 30 креативов каждый месяц
+                        a.main-video_limit-btn Открыть за $99 / мес
+                    .main-video_header
+                        .main-video_locations
+                            img.svg(src="src/images/icons/ios.svg")
+                            img.svg(src="src/images/icons/android.svg")
+                            span 🇷🇺🇺🇦🇧🇾
+                        .main-video_period
+                            span 40 дней
+                            span 12 июл - 21 авг
+                        .main-video_favorite-wrap
+                            img.svg(src="src/images/icons/favorite.svg")
+                    .main-video_content
+                        .main-video_title Uber Russia
+                        .main-video_description До конца лента заказывай поездки в центр и обратно со скидкой до 30%
+                        .main-video_text-actions
+                            .main-video_text-action Скопировать
+                            .main-video_actions-dot
+                            .main-video_text-action Перевести
+                        a.main-video_button(href="#")
+                            span Перейти
+                            img.svg(src="src/images/icons/arrow.svg")
+                    .main-video_statistic
+                        .main-statistic_photo
+                            img(src="https://lh3.googleusercontent.com/qy_wZ92sFQccojEtscg52vtdAQmCIeQ4jsybMPmuML9Or7_SEOyrt0Jn0wyG-l2Fyw")
+                        .main-statistic_likes
+                            img.svg.main-statistic_like-icon(src="src/images/icons/tt-like.svg")
+                            .main-statistic_like-count 999
+                        .main-statistic_comments
+                            img.svg.main-statistic_comment-icon(src="src/images/icons/tt-comment.svg")
+                            .main-statistic_comment-count 15
+                        .main-statistic_share
+                            img.main-statistic_share-icon(src="src/images/icons/tt-share.svg")
+                            .main-statistic_share-count 99
+                        .main-statistic_views
+                            img.main-statistic_view-icon(src="src/images/icons/tt-views.svg")
+                            .main-statistic_view-count 1000
+                .main-video
+                    .main-video_gradient-top
+                    .main-video_gradient-bottom
+                    video.main-video_src(src="https://v16m.tiktokcdn.com/fd5efcf023de654e83c7a913175faeb0/5f3ec29d/video/tos/useast2a/tos-useast2a-ve-0068c002/a89c2382844a41af956e31921540f53d/?a=1233&br=1660&bt=830&cr=0&cs=0&dr=0&ds=3&er=&l=2020081818361301018907313246390307&lr=tiktok_m&mime_type=video_mp4&qs=0&rc=M2wzeW9uZWdkdTMzZjczM0ApZjM1ODtmNDw7NzgzNDxoOGdjanBzLy1wY25fLS0tMTZzczQtY2AyLmM1YjUyYC1hYWI6Yw%3D%3D&vl=&vr=\"")
+                    .main-video_limit
+                        .main-video_limit-title Достигнут месячный лимит по креативам
+                        .main-video_limit-desc На бесплатном тарифе можно смотреть только 30 креативов каждый месяц
+                        a.main-video_limit-btn Открыть за $99 / мес
+                    .main-video_header
+                        .main-video_locations
+                            img.svg(src="src/images/icons/ios.svg")
+                            img.svg(src="src/images/icons/android.svg")
+                            span 🇷🇺🇺🇦🇧🇾
+                        .main-video_period
+                            span 40 дней
+                            span 12 июл - 21 авг
+                        .main-video_favorite-wrap
+                            img.svg(src="src/images/icons/favorite.svg")
+                    .main-video_content
+                        .main-video_title Uber Russia
+                        .main-video_description До конца лента заказывай поездки в центр и обратно со скидкой до 30%
+                        .main-video_text-actions
+                            .main-video_text-action Скопировать
+                            .main-video_actions-dot
+                            .main-video_text-action Перевести
+                        a.main-video_button(href="#")
+                            span Перейти
+                            img.svg(src="src/images/icons/arrow.svg")
+                    .main-video_statistic
+                        .main-statistic_photo
+                            img(src="https://lh3.googleusercontent.com/qy_wZ92sFQccojEtscg52vtdAQmCIeQ4jsybMPmuML9Or7_SEOyrt0Jn0wyG-l2Fyw")
+                        .main-statistic_likes
+                            img.svg.main-statistic_like-icon(src="src/images/icons/tt-like.svg")
+                            .main-statistic_like-count 999
+                        .main-statistic_comments
+                            img.svg.main-statistic_comment-icon(src="src/images/icons/tt-comment.svg")
+                            .main-statistic_comment-count 15
+                        .main-statistic_share
+                            img.main-statistic_share-icon(src="src/images/icons/tt-share.svg")
+                            .main-statistic_share-count 99
+                        .main-statistic_views
+                            img.main-statistic_view-icon(src="src/images/icons/tt-views.svg")
+                            .main-statistic_view-count 1000
+                .main-video
+                    .main-video_gradient-top
+                    .main-video_gradient-bottom
+                    video.main-video_src(src="https://v16m.tiktokcdn.com/fd5efcf023de654e83c7a913175faeb0/5f3ec29d/video/tos/useast2a/tos-useast2a-ve-0068c002/a89c2382844a41af956e31921540f53d/?a=1233&br=1660&bt=830&cr=0&cs=0&dr=0&ds=3&er=&l=2020081818361301018907313246390307&lr=tiktok_m&mime_type=video_mp4&qs=0&rc=M2wzeW9uZWdkdTMzZjczM0ApZjM1ODtmNDw7NzgzNDxoOGdjanBzLy1wY25fLS0tMTZzczQtY2AyLmM1YjUyYC1hYWI6Yw%3D%3D&vl=&vr=\"")
+                    .main-video_limit
+                        .main-video_limit-title Достигнут месячный лимит по креативам
+                        .main-video_limit-desc На бесплатном тарифе можно смотреть только 30 креативов каждый месяц
+                        a.main-video_limit-btn Открыть за $99 / мес
+                    .main-video_header
+                        .main-video_locations
+                            img.svg(src="src/images/icons/ios.svg")
+                            img.svg(src="src/images/icons/android.svg")
+                            span 🇷🇺🇺🇦🇧🇾
+                        .main-video_period
+                            span 40 дней
+                            span 12 июл - 21 авг
+                        .main-video_favorite-wrap
+                            img.svg(src="src/images/icons/favorite.svg")
+                    .main-video_content
+                        .main-video_title Uber Russia
+                        .main-video_description До конца лента заказывай поездки в центр и обратно со скидкой до 30%
+                        .main-video_text-actions
+                            .main-video_text-action Скопировать
+                            .main-video_actions-dot
+                            .main-video_text-action Перевести
+                        a.main-video_button(href="#")
+                            span Перейти
+                            img.svg(src="src/images/icons/arrow.svg")
+                    .main-video_statistic
+                        .main-statistic_photo
+                            img(src="https://lh3.googleusercontent.com/qy_wZ92sFQccojEtscg52vtdAQmCIeQ4jsybMPmuML9Or7_SEOyrt0Jn0wyG-l2Fyw")
+                        .main-statistic_likes
+                            img.svg.main-statistic_like-icon(src="src/images/icons/tt-like.svg")
+                            .main-statistic_like-count 999
+                        .main-statistic_comments
+                            img.svg.main-statistic_comment-icon(src="src/images/icons/tt-comment.svg")
+                            .main-statistic_comment-count 15
+                        .main-statistic_share
+                            img.main-statistic_share-icon(src="src/images/icons/tt-share.svg")
+                            .main-statistic_share-count 99
+                        .main-statistic_views
+                            img.main-statistic_view-icon(src="src/images/icons/tt-views.svg")
+                            .main-statistic_view-count 1000
+                .main-video
+                    .main-video_gradient-top
+                    .main-video_gradient-bottom
+                    video.main-video_src(src="https://v16m.tiktokcdn.com/fd5efcf023de654e83c7a913175faeb0/5f3ec29d/video/tos/useast2a/tos-useast2a-ve-0068c002/a89c2382844a41af956e31921540f53d/?a=1233&br=1660&bt=830&cr=0&cs=0&dr=0&ds=3&er=&l=2020081818361301018907313246390307&lr=tiktok_m&mime_type=video_mp4&qs=0&rc=M2wzeW9uZWdkdTMzZjczM0ApZjM1ODtmNDw7NzgzNDxoOGdjanBzLy1wY25fLS0tMTZzczQtY2AyLmM1YjUyYC1hYWI6Yw%3D%3D&vl=&vr=\"")
+                    .main-video_limit
+                        .main-video_limit-title Достигнут месячный лимит по креативам
+                        .main-video_limit-desc На бесплатном тарифе можно смотреть только 30 креативов каждый месяц
+                        a.main-video_limit-btn Открыть за $99 / мес
+                    .main-video_header
+                        .main-video_locations
+                            img.svg(src="src/images/icons/ios.svg")
+                            img.svg(src="src/images/icons/android.svg")
+                            span 🇷🇺🇺🇦🇧🇾
+                        .main-video_period
+                            span 40 дней
+                            span 12 июл - 21 авг
+                        .main-video_favorite-wrap
+                            img.svg(src="src/images/icons/favorite.svg")
+                    .main-video_content
+                        .main-video_title Uber Russia
+                        .main-video_description До конца лента заказывай поездки в центр и обратно со скидкой до 30%
+                        .main-video_text-actions
+                            .main-video_text-action Скопировать
+                            .main-video_actions-dot
+                            .main-video_text-action Перевести
+                        a.main-video_button(href="#")
+                            span Перейти
+                            img.svg(src="src/images/icons/arrow.svg")
+                    .main-video_statistic
+                        .main-statistic_photo
+                            img(src="https://lh3.googleusercontent.com/qy_wZ92sFQccojEtscg52vtdAQmCIeQ4jsybMPmuML9Or7_SEOyrt0Jn0wyG-l2Fyw")
+                        .main-statistic_likes
+                            img.svg.main-statistic_like-icon(src="src/images/icons/tt-like.svg")
+                            .main-statistic_like-count 999
+                        .main-statistic_comments
+                            img.svg.main-statistic_comment-icon(src="src/images/icons/tt-comment.svg")
+                            .main-statistic_comment-count 15
+                        .main-statistic_share
+                            img.main-statistic_share-icon(src="src/images/icons/tt-share.svg")
+                            .main-statistic_share-count 99
+                        .main-statistic_views
+                            img.main-statistic_view-icon(src="src/images/icons/tt-views.svg")
+                            .main-statistic_view-count 1000
+        .videos-loader
+            svg.spinner(width='65px', height='65px', viewbox='0 0 66 66', xmlns='http://www.w3.org/2000/svg')
+                circle.circle(fill='none', stroke-width='6', stroke-linecap='round', cx='33', cy='33', r='30')
+
+

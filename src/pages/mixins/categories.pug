@@ -1,0 +1,13 @@
+mixin categories(categories)
+    .filter-categories_header
+        .filter-categories_title Категория продукта
+        .filter-categories_reset Сбросить
+    .filter-categories_wrapper
+        ul.filter-categories_apps
+            .category-title Все приложения
+            each app in categories.apps
+                li.filter-categories_app=app
+        ul.filter-categories_games
+            .category-title Все игры
+            each game in categories.games
+                li.filter-categories_game=game
