@@ -1,0 +1,295 @@
+#main-tariffs {
+
+  background-image: linear-gradient(to bottom, #f7f9fc, #e0e8f4);
+  padding-bottom: 110px;
+  position: relative;
+
+  .main-tariff_pattern {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    border: 100vw solid transparent;
+    border-left: 0px  solid #fff;
+    border-top: 184px solid #fff;
+    z-index: 1;
+    border-width: 184px 100vw 0px 0;
+
+
+
+  }
+
+  .patterns-wrapper {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    .container {
+      width: 1200px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0 45px;
+    }
+  }
+
+  .tariff-patter1, .tariff-patter2 {
+    position: absolute;
+    width: 338px;
+  }
+
+  .tariff-patter1 {
+    transform: translateY(-115px);
+  }
+
+  .tariff-patter2 {
+    right: 0;
+    transform: translateY(-185px);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding-top: 52px;
+  }
+
+  .main-tariffs_title {
+    background-image: linear-gradient(101deg, #0099ff 2%, #0015ff 99%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    font-family: $graphikB;
+    width: fit-content;
+    font-size: 66px;
+    margin-bottom: 120px;
+  }
+
+  .main-tariffs_cards  {
+    display: flex;
+  }
+
+  .main-tariffs_card {
+    border-radius: 20px;
+    box-shadow: 0 0 74px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    position: relative;
+    padding: 95px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 545px;
+    height: 480px;
+  }
+
+  .tariff-gif {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .tariffs-card_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 27px;
+  }
+
+  .tariffs-card_title {
+    background: -webkit-linear-gradient(180deg,rgba(255,0,179,.95) 25%,#8300ff 83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    font-size: 36px;
+    font-family: $graphikB;
+    font-weight: 600;
+  }
+
+  .tariffs-card_desc {
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 1.44;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: #000000;
+  }
+
+  .card-current_tariff {
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, #ebf1f9, #c3d2e9);
+    padding: 10px 0px;
+    font-size: 22px;
+    font-family: $graphikMd;
+    line-height: 1.64;
+    letter-spacing: -0.44px;
+    text-align: center;
+    color: #111111;
+    width: 340px;
+    margin-bottom: 33px;
+  }
+
+  .tariffs-card_slider-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .tariffs-card_slider {
+    width: 340px;
+    height: 14px;
+    border-radius: 7px;
+    background-image: linear-gradient(to bottom, #ebf1f9, #c3d2e9);
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  .slider-aggregate {
+    height: 100%;
+    border-radius: 7px;
+    background: -webkit-linear-gradient(180deg,rgba(255,0,179,.95) 25%,#8300ff 100%);
+    width: 70%;
+  }
+
+  .tariffs-card-slider-desc {
+    text-align: center;
+    max-width: 311px;
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 1.32;
+    letter-spacing: -0.38px;
+    color: #686868;
+  }
+
+  .tariffs-card_remainder {
+    display: none;
+  }
+
+  .tariffs-card_description {
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 1.32;
+    letter-spacing: -0.38px;
+    text-align: center;
+    color: #686868;
+    max-width: 351px;
+    display: block;
+  }
+
+  .tariffs-card_name {
+    background-image: linear-gradient(95deg, #00e598 4%, #238000 98%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    font-family: $graphikB;
+    font-weight: 600;
+    margin-top: auto;
+  }
+  
+  
+  .basic-tariff {
+    margin-right: 20px;
+
+    &.active-tariff {
+
+      background-clip: padding-box;
+      border: 6px solid transparent;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -6px;
+        border-radius: inherit;
+        background: linear-gradient(130deg,#8300ff 5%,rgba(255, 0, 179, 0.95) 80%);
+      }
+
+
+      .tariffs-card_remainder {
+        display: block;
+      }
+
+      .tariffs-card_description {
+        display: none;
+      }
+      
+    }
+  }
+
+  .pro-tariff {
+
+    .tariffs-card_cancel-wrap{
+      display: none;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .tariffs-card_cancel-btn {
+      font-family: $graphikMd;
+      font-style: normal;
+      line-height: 1.32;
+      letter-spacing: -0.38px;
+      color: #007aff;
+      cursor: pointer;
+    }
+
+    .tariffs-card_description {
+      display: block;
+    }
+
+    &.active-tariff {
+      background-clip: padding-box;
+      border: 6px solid transparent;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -6px;
+        border-radius: inherit;
+        background: linear-gradient(181deg,#bbbfc6 32%,#121514 80%);
+      }
+
+      .tariffs-card_description {
+        display: none;
+      }
+
+      .tariffs-card_cancel-wrap {
+        display: flex;
+      }
+
+    }
+
+    .tariffs-card_title {
+      background: -webkit-linear-gradient(180deg, #bbbfc6 40%, #000 75%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card-current_tariff {
+      background-image: linear-gradient(to bottom, #279cff, #0078fb 100%);
+      color: #fff;
+
+      &.active {
+        background-image: linear-gradient(to bottom, #ebf1f9, #c3d2e9);
+        color: $black;
+      }
+
+    }
+
+    .tariffs-card_name {
+      font-size: 66px;
+    }
+
+  }
+  
+
+}

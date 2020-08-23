@@ -423,3 +423,48 @@ function menuToggle() {
 }
 
 menuToggle()
+
+function tariffSlider() {
+    const currentRemainder = $('.current_remainder').text();
+    const allRemainder = $('.all_remainder').text();
+    const sliderAggregate = $('.slider-aggregate');
+
+    console.log(currentRemainder)
+    console.log(allRemainder);
+
+    sliderAggregate.css('width', (currentRemainder/allRemainder)*100 + '%');
+
+}
+
+tariffSlider()
+
+function tariffActive() {
+    const basic = $('.basic-tariff');
+    const nameBasicTariff = $('.basic-tariff .card-current_tariff');
+    const pro = $('.pro-tariff');
+    const nameProTariff = $('.pro-tariff .card-current_tariff');
+    const currentTariff = $('header .account-tarif');
+
+    if(basic.hasClass('active-tariff')) {
+        nameBasicTariff.text('Текущий тариф')
+        nameBasicTariff.css('opacity', '1')
+        currentTariff.text('Бесплатный тариф')
+        currentTariff.removeClass('pro-tariff')
+    } else {
+        nameBasicTariff.text('Недоступно')
+        nameBasicTariff.css('opacity', '0.5')
+    }
+
+    if(pro.hasClass('active-tariff')) {
+        nameProTariff.text('Текущий тариф')
+        nameProTariff.addClass('active')
+        currentTariff.text('Платный тариф')
+        currentTariff.addClass('pro-tariff')
+    } else {
+        nameProTariff.text('Перейти к оплате')
+        nameProTariff.removeClass('active')
+    }
+
+}
+
+tariffActive();

@@ -6,22 +6,7 @@ block vars
     - const countries = [{img: 'ukr', country: 'Украина'}, {img: 'rus', country: 'Россия'}, {img: 'ger', country: 'Германия'},{img: 'usa', country: 'США'}, {img: 'aus', country: 'Австрия'}, {img: 'ukr', country: 'Украина'}, {img: 'rus', country: 'Россия'}, {img: 'ger', country: 'Германия'},{img: 'usa', country: 'США'}, {img: 'aus', country: 'Австрия'}]
     - const categories = {apps: ['Бизнес', 'Графика и дизайн', 'Дети', 'Еда и напитки', 'Здоровье и фитнес', 'Книги', 'Музыка', 'Социальные сети', 'Знакомства', 'Образ жизни', 'Покупка', 'Фото и видео'], games: ['Экшен', 'Приключения', 'Аркады', 'Стратегии', 'Настольные', 'Казино', 'Казуальные', 'Обучающие', 'Музыка', 'Головоломки', 'Гонки', 'Ролевые']}
 append header
-    header.header-videos
-        .container.d-flex
-            img.header-logo(src='src/images/icons/logo.png')
-            nav.header-nav
-                a.header-nav_item.active-link(href="#") Креативы
-                a.header-nav_item(href="#") Избранное
-                a.header-nav_item(href="#") Приглашения
-            .account-wrapper
-                .account-tarif Бесплатный тариф
-                .account-settings
-                    img.svg.account-menu_toggle(src="src/images/icons/arrow.svg")
-                    img.svg.account-icon(src="src/images/icons/account-icon.svg")
-                .account-menu
-                    span.account-menu_name google@gmail.com
-                    span.account-menu_settings Настройки
-                    span.account-menu_logout Выход
+    include includes/header
 
 
 

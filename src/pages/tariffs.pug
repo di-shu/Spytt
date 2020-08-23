@@ -1,0 +1,46 @@
+extends includes/layout
+
+block vars
+    - const title = 'Spytt | Tariffs'
+
+append header
+    include includes/header
+
+append content
+    main#main-tariffs
+        .main-tariff_pattern
+            .patterns-wrapper
+                .container
+                    img.svg.tariff-patter1(src="./src/images/patterns/pattern1.png")
+                    img.svg.tariff-patter2(src="./src/images/patterns/pattern2.png")
+        .container.d-flex.flex-column.align-items-center
+            h1.main-tariffs_title Тарифы
+            .main-tariffs_cards
+                .main-tariffs_card.basic-tariff
+                    img.tariff-gif(src="./src/images/gifs/t_2_1.gif")
+                    .tariffs-card_content
+                        .tariffs-card_title Чуть-чуть погляжу
+                        .tariffs-card_desc 30 креативов в месяц
+                    .card-current_tariff Текущий тариф
+                    .tariffs-card_remainder
+                        .tariffs-card_slider-wrap
+                            .tariffs-card_slider
+                                .slider-aggregate
+                            .tariffs-card-slider-desc <span class="current_remainder">21</span> из <span class="all_remainder">30</span> израсходовано </br> за  период <span class="card-tariff_period">27 августа – 27 сентября</span>
+                    .tariffs-card_description Тариф для новичков, чтобы они смогли просто посмотреть, нужен ли им Spytt
+                    .tariffs-card_name Бесплатный тариф
+                .main-tariffs_card.pro-tariff.active-tariff
+                    img.tariff-gif(src="./src/images/gifs/t_2_2.gif")
+                    .tariffs-card_content
+                        .tariffs-card_title Хочу знать все
+                        .tariffs-card_desc без ограничений
+                    a.card-current_tariff(href="#") Перейти к оплате
+                    .tariffs-card_description Конвертируем по актуальному курсу на момент оплаты
+                    .tariffs-card_cancel-wrap
+                        .tariffs-card_cancel-desc Следующий платёж 28 сентября
+                        a.tariffs-card_cancel-btn(src="#") Отменить подписку
+
+                    .tariffs-card_name 99$ / мес
+
+append footer
+    include includes/footer
